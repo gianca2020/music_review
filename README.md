@@ -1,4 +1,8 @@
-# React + Vite
+# music_review
+
+I just want to see how far i can take this
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
