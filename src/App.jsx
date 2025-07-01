@@ -2,6 +2,8 @@
 import Taskbar from './components/Taskbar'
 import Feature from './components/feature'
 import './App.css'
+import AlbumCover from './components/AlbumCover'
+import AlbumCoverCard from './components/AlbumCoverCard'
 
 function App() {
   
@@ -10,6 +12,7 @@ function App() {
     <>
       <Taskbar></Taskbar>
       <Feature></Feature>
+      <AlbumCover></AlbumCover>  
     </>
   )
 }

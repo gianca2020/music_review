@@ -4,7 +4,7 @@ import React from "react";
 const AlbumCoverCard = ({ title, artist, cover }) => {
     return(
         <>
-        <img>{cover}</img>
+        <img src = {cover} alt="title"></img>
         <p>{title}</p>
         <p>{artist}</p>
         </>
