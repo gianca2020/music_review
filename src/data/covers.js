@@ -1,6 +1,4 @@
 import {v4 as uuid} from 'uuid';
-import { getAlbum } from '../API/spotify'; // Assuming this is the correct import path for your getAlbum function
-
 const covers = [
     {   
         title: "IGOR",

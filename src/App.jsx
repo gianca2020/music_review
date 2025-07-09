@@ -10,9 +10,11 @@ function App() {
 
   return (
     <>
+    <div className="bg-[#F0F4F8] min-h-screen">
       <Taskbar></Taskbar>
       <Feature></Feature>
       <AlbumCover></AlbumCover>  
+      </div>
     </>
   )
 }
