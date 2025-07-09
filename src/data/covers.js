@@ -1,10 +1,12 @@
 import {v4 as uuid} from 'uuid';
+import { getAlbum } from '../API/spotify'; // Assuming this is the correct import path for your getAlbum function
 
 const covers = [
     {   
         title: "IGOR",
         artist: "Tyler, The Creator",
-        cover: "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Igor_-_Tyler%2C_the_Creator.jpg/250px-Igor_-_Tyler%2C_the_Creator.jpg",
+        albumID: "4aawyAB9vmqN3uQ7FjRGTy",
+        //cover: "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Igor_-_Tyler%2C_the_Creator.jpg/250px-Igor_-_Tyler%2C_the_Creator.jpg",
         id: uuid(),
 
     }
