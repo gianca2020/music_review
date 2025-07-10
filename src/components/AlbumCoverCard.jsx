@@ -15,16 +15,14 @@ const AlbumCoverCard = ({ albumID}) => {
         }, [albumID]);
     console.log("Album data:", albumData);
     return(
-        <div className="flex flex-col"> 
-            <div className="w-48 h-48">  
+        <> 
+            <div className="text-center text-[#a4b0c1] text-[14px] ">
                 <img src = {albumData?.images[0]?.url} alt="title" className="h-full w-full object-cover"></img>
-            </div>
-            <div className="text-center text-[#a4b0c1] text-[14px]">
-                <p>{ albumData?.name}</p>
+                <p>{albumData?.name}</p>
                 <p>{albumData?.artists[0]?.name}</p>
                 <p>{albumData?.release_date}</p>
             </div>
-        </div>
+        </>
     )
 }
 

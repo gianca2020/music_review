@@ -14,7 +14,7 @@ const AlbumCover = () => {
     }, []);
 
     return(
-        <div className="grid grid-cols-5 grid-rows-4 gap-4 p-4 mx-auto max-w-fit place-items-center mt-6">
+        <div className="grid grid-cols-5 grid-rows-4 gap-14 p-4 mx-auto max-w-fit place-items-center mt-6 ">
         {albums.map((album) => (  
             <AlbumCoverCard
                 key={album.id}       
@@ -24,6 +24,7 @@ const AlbumCover = () => {
                 cover={album.images[0]?.url}   
             />
         ))}
+
         </div>
     )
 }
