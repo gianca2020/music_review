@@ -7,7 +7,7 @@ const AlbumCoverCard = ({ albumID}) => {
     useEffect(() => {
             const fetchAlbumData = async () => {
                 //maybe replace it with a prop for "albumID" later"
-                const data = await getAlbum("3mH6qwIy9crq0I9YQbOuDf");
+                const data = await getAlbum("621OhgnZJ7Pz8iUazct1In");
                 setAlbumData(data);
                 // Do something with albumData
             };
@@ -16,10 +16,14 @@ const AlbumCoverCard = ({ albumID}) => {
     console.log("Album data:", albumData);
     return(
         <>
-        <img src = {albumData?.images[0]?.url} alt="title"></img>
+        <div className="h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-44">
+        <img src = {albumData?.images[0]?.url} alt="title" className="h-full w-full object-cover"></img>
+        </div>
+        <div className="text-center text-[#a4b0c1] text-[14px]">
         <p>{ albumData?.name}</p>
         <p>{albumData?.artists[0]?.name}</p>
         <p>{albumData?.release_date}</p>
+        </div>
         </>
     )
 }
