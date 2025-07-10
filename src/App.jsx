@@ -13,6 +13,7 @@ function App() {
     <div className="bg-[#F0F4F8] min-h-screen">
       <Taskbar></Taskbar>
       <Feature></Feature>
+      <p className='text-[rgb(100,115,128)] text-[16px]'>new release</p>
       <AlbumCover></AlbumCover>  
       </div>
     </>

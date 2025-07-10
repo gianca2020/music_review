@@ -1,18 +1,27 @@
-//import React, { use, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import AlbumCoverCard from "./AlbumCoverCard";
-import coverData from "../data/covers";
-
+import { getNewReleases } from "../API/spotify";
 
 const AlbumCover = () => {
+    const [albums, setAlbums] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const newReleases = await getNewReleases();
+            setAlbums(newReleases);
+        };
+        fetchData();
+    }, []);
+
     return(
-        <div className="flex flex-col justify-center align-middle items-center gap-4 p-4 mx-auto h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-44 mt-8" >
-        {coverData.map((album) => (  
+        <div className="grid grid-cols-5 grid-rows-4 gap-4 p-4 mx-auto max-w-fit place-items-center mt-6">
+        {albums.map((album) => (  
             <AlbumCoverCard
                 key={album.id}       
-                albumID={album.albumID}
-                title={album.title}  
-                artist={album.artist} 
-                cover={album.cover}   
+                albumID={album.id}
+                title={album.name}  
+                artist={album.artists[0]} 
+                cover={album.images[0]?.url}   
             />
         ))}
         </div>
@@ -20,3 +29,6 @@ const AlbumCover = () => {
 }
 
 export default AlbumCover;
+
+// In AlbumCoverCard, change to:
+// <div className="h-48 w-48"> // Fixed square size
